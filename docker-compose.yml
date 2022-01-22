@@ -1,13 +1,12 @@
 version: "3"
 services:
 
-   gohttpserver:
-     image: codeskyblue/gohttpserver
-     container_name: gohttpserver
-     restart: always
-     privileged: true
-     ports:
+  gohttpserver:
+    image: codeskyblue/gohttpserver
+    container_name: gohttpserver
+    restart: always
+    privileged: true
+    ports:
       - "8095:8000"
-     volumes:
+    volumes:
       - ./share:/app/public
-      
