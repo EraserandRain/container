@@ -4,10 +4,11 @@ Base on 【https://github.com/codeskyblue/gohttpserver】
 ### Usage
 
 ```bash
-git clone http@github.com:EraserandRain/file-server.git
+git clone http@github.com:EraserandRain/docker-project.git
+## or single folder download
+svn export https://github.com/EraserandRain/docker-project/branches/master/file-server
 
-cd ./file-server
-
+# start
 docker-compose up -d
 ```
 ### Config
