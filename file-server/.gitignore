@@ -1,2 +1,2 @@
-./share/*
-!./share/.ghs.yml
+share/*
+!share/.ghs.yml
