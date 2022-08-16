@@ -1,0 +1,19 @@
+version: '3'
+services:
+  svn:
+    image: elleflorio/svn-server
+    container_name: svn-server
+    ports:
+      - "8100:80"
+      - "3690:3690"
+    volumes:
+      - ./svn/svn_repo/:/home/svn/ # 挂载存放版本文件夹
+      - ./svn/svn_config/:/etc/subversion/ # 挂载存放svn配置文件夹
+      - /etc/localtime:/etc/localtime:ro # 主机的时间同步到容器
+    restart: always
+# networks:
+#   svn_network:
+#     drive: bridge
+#     ipam:
+#       config:
+#         -subnet: "172.20.1.0/24"
