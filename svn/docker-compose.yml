@@ -7,10 +7,11 @@ services:
       - "8100:80"
       - "3690:3690"
     volumes:
-      - ./svn/svn_repo/:/home/svn/ # 挂载存放版本文件夹
-      - ./svn/svn_config/:/etc/subversion/ # 挂载存放svn配置文件夹
+      - ./svn/svn_repo/:/home/svn/:z # 挂载存放版本文件夹
+      - ./svn/svn_config/:/etc/subversion/:z # 挂载存放svn配置文件夹
       - /etc/localtime:/etc/localtime:ro # 主机的时间同步到容器
     restart: always
+    privileged: true
 # networks:
 #   svn_network:
 #     drive: bridge

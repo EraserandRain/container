@@ -1,0 +1,13 @@
+version: '3'
+services:
+  windows:
+    image: mcr.microsoft.com/windows:20H2
+    container_name: windows
+    restart: always
+    privileged: true
+# networks:
+#   svn_network:
+#     drive: bridge
+#     ipam:
+#       config:
+#         -subnet: "172.20.1.0/24"
