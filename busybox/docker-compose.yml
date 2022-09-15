@@ -1,0 +1,19 @@
+version: '3'
+networks:
+  busybox-net:
+    driver: bridge
+services:
+  busybox1:
+    image: busybox
+    container_name: busybox1
+    networks:
+      - busybox-net
+    tty: true
+  busybox2:
+    image: busybox
+    container_name: busybox2
+    networks:
+      - busybox-net
+    tty: true
+
+
