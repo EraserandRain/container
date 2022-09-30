@@ -15,5 +15,12 @@ services:
     networks:
       - busybox-net
     tty: true
+  busybox3:
+    image: busybox
+    container_name: busybox3
+    networks:
+      - busybox-net
+    tty: true
+
 
 

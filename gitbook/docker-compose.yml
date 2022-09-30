@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  gitbook:
+    image: fellah/gitbook
+    ports:
+      - "5000:4000"
+    volumes:
+      - ./gitbook:/srv/gitbook
+      - ./docs/SUMMARY.md:/srv/gitbook/SUMMARY.md
+      - ./docs/README.md:/srv/gitbook/README.md
+      - ./docs/files:/srv/gitbook/files
