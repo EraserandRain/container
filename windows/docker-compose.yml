@@ -1,7 +1,8 @@
 version: '3'
 services:
   windows:
-    image: mcr.microsoft.com/windows:20H2
+    # image: mcr.microsoft.com/windows:20H2
+    image: mcr.microsoft.com/windows/servercore:ltsc2022
     container_name: windows
     restart: always
     privileged: true
