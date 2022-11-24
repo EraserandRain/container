@@ -1,8 +1,9 @@
 version: '3'
 services:
   ubuntu:
-    restart: always
-    image: ubuntu:18.04
+    build: .
     container_name: ubuntu-18.04
+    user: root
     privileged: true
     tty: true
+    restart: always
