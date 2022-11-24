@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 WORKDIR /root
 RUN set -x \
     && apt-get -y update \
-    && apt-get -y install apt-utils net-tools iproute2 iputils-ping openssh-server \
+    && apt-get -y install apt-utils net-tools iproute2 iputils-ping openssh-server sudo \
     && apt-get -y install vim \
     && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config \
     && echo root:test | chpasswd
