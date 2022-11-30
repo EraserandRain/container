@@ -1,9 +1,0 @@
-version: '3'
-services:
-  ubuntu:
-    build: .
-    container_name: ubuntu-18.04
-    user: root
-    privileged: true
-    tty: true
-    restart: always

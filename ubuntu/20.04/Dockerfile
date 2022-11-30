@@ -1,8 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
+ENV DEBIAN_FRONTEND noninteractive
 WORKDIR /root
 RUN set -x \
     && apt-get -y update \
-    && apt-get -y install apt-utils net-tools iproute2 iputils-ping openssh-server sudo lsb-core \
+    && apt-get -y install apt-utils tcl net-tools iproute2 iputils-ping openssh-server sudo lsb-core \
     && apt-get -y install vim \
     && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config \
     && echo root:test | chpasswd

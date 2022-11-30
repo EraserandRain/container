@@ -1,0 +1,16 @@
+version: '3'
+services:
+  ubuntu-18.04:
+    build: ./18.04/
+    container_name: ubuntu-18.04
+    user: root
+    privileged: true
+    tty: true
+    restart: always
+  ubuntu-20.04:
+    build: ./20.04/
+    container_name: ubuntu-20.04
+    user: root
+    privileged: true
+    tty: true
+    restart: always
