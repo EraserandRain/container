@@ -8,6 +8,6 @@ RUN set -x \
     && echo root:test | chpasswd
 RUN service ssh start
 EXPOSE 22
-COPY ./start.sh /root/start.sh
+COPY ./script/start.sh /root/start.sh
 RUN chmod +x /root/start.sh \
     && sed -i '$a\[[ -f /root/start.sh ]] && /root/start.sh ' /root/.bashrc

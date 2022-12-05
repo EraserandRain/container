@@ -1,7 +1,19 @@
 version: '3'
 services:
+  ubuntu-12.04:
+    build: 
+      context: .
+      dockerfile: ./12.04/Dockerfile
+    container_name: ubuntu-12.04
+    user: root
+    privileged: true
+    tty: true
+    restart: always
+    network_mode: bridge
   ubuntu-18.04:
-    build: ./18.04/
+    build:
+      context: .
+      dockerfile: ./18.04/Dockerfile
     container_name: ubuntu-18.04
     user: root
     privileged: true
@@ -9,7 +21,9 @@ services:
     restart: always
     network_mode: bridge
   ubuntu-20.04:
-    build: ./20.04/
+    build:
+      context: .
+      dockerfile: ./20.04/Dockerfile
     container_name: ubuntu-20.04
     user: root
     privileged: true

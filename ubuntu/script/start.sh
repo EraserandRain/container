@@ -1,7 +1,7 @@
 #!/bin/bash
 LOGTIME=$(date "+%Y-%m-%d %H:%M:%S")
 echo "[${LOGTIME}] startup run..." >> start.log
-service ssh start >> start.log
+/etc/init.d/ssh start >> start.log
 
 
 # add user tester
