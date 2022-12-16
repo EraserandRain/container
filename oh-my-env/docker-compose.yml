@@ -1,0 +1,14 @@
+version: '3'
+services:
+  oh-my-env:
+    build:
+      context: .
+    container_name: oh-my-env
+    hostname: oh-my-env
+    user: root
+    tty: true
+    restart: always
+    privileged: true
+    network_mode: bridge
+    volumes: 
+      - ./:/root/oh-my-env/
