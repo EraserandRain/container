@@ -10,6 +10,7 @@ services:
     tty: true
     restart: always
     network_mode: bridge
+
   ubuntu-18.04:
     build:
       context: .
@@ -20,6 +21,7 @@ services:
     tty: true
     restart: always
     network_mode: bridge
+
   ubuntu-20.04:
     build:
       context: .
