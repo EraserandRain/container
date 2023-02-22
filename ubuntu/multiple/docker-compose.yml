@@ -4,7 +4,7 @@ services:
     build: 
       context: .
       dockerfile: ./12.04/Dockerfile
-    container_name: ubuntu-12.04
+    container_name: node1204
     user: root
     privileged: true
     tty: true
@@ -15,7 +15,7 @@ services:
     build:
       context: .
       dockerfile: ./18.04/Dockerfile
-    container_name: ubuntu-18.04
+    container_name: node1804
     user: root
     privileged: true
     tty: true
@@ -26,7 +26,7 @@ services:
     build:
       context: .
       dockerfile: ./20.04/Dockerfile
-    container_name: ubuntu-20.04
+    container_name: node2004
     user: root
     privileged: true
     tty: true
