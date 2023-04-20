@@ -2,14 +2,15 @@ version: "3"
 services:
   wordpress-mysql:
     container_name: mysql
-    image: mysql:latest
+    image: mysql:8.0
     command:
     - --default_authentication_plugin=mysql_native_password
     - --character-set-server=utf8mb4
     - --collation-server=utf8mb4_unicode_ci
     volumes:
-      - ./database/mysql/:/var/lib/mysql/
-      - ./database/my.cnf:/etc/my.cnf
+      - ${PWD}/db/my.cnf/:/etc/mysql/conf.d/my.cnf
+      - ${PWD}/db/mysql/:/var/lib/mysql/
+      - ${PWD}/db/logs/:/var/log/mysql/
     restart: always
     environment:
       MYSQL_DATABASE: wordpress
@@ -32,5 +33,5 @@ services:
       WORDPRESS_DB_PASSWORD: docker233
     privileged: true
     volumes:
-      - ./wordpress-settings/:/usr/src/wordpress/
+      - ./wp/:/var/www/html/
      
